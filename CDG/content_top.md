@@ -4,7 +4,7 @@
 
 ## Vulnerability Description
 
-The following code contains an SQL injection vulnerability in the `id` parameter. An attacker can exploit this vulnerability to execute arbitrary SQL queries in the database, potentially leading to data leakage, data tampering, or other malicious activities.
+The following code (`CDG_content_top.jsp`)contains an SQL injection vulnerability in the `id` parameter. An attacker can exploit this vulnerability to execute arbitrary SQL queries in the database, potentially leading to data leakage, data tampering, or other malicious activities.
 
 ## Vulnerable Code
 
