@@ -10,7 +10,7 @@
 The application allows unauthenticated users to upload files via the `/imgk3` endpoint. The uploaded files are not properly validated, which can lead to remote code execution (RCE) if a malicious file is uploaded.
 
 ### Affected Endpoint:
-`/imgk3`
+`/app/imgk3`
 
 ### Vulnerability Type:
 Unauthenticated RCE
@@ -60,7 +60,7 @@ public String imgk3(HttpServletRequest request, HttpServletResponse response) {
 
 ### Proof of Concept (PoC):
 ```http
-POST /imgk3 HTTP/1.1
+POST /app/imgk3 HTTP/1.1
 Host: 
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36
 Accept-Encoding: gzip, deflate

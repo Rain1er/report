@@ -12,7 +12,7 @@
 The application allows unauthenticated users to upload files via the `/gok4` endpoint. The uploaded files are not properly validated, which can lead to remote code execution (RCE) if a malicious file is uploaded.
 
 ### Affected Endpoint:
-`/gok4`
+`/app/gok4`
 
 ### Vulnerability Type:
 Unauthenticated RCE
@@ -48,7 +48,7 @@ public String go(HttpServletRequest request, HttpServletResponse response) {
 
 ### Proof of Concept (PoC):
 ```http
-POST /gok4 HTTP/1.1
+POST /app/gok4 HTTP/1.1
 Host: 
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36
 Accept-Encoding: gzip, deflate
