@@ -11,7 +11,7 @@ Arbitrary Command Execution in Exam Export PDF Functionality
 The code provided contains a critical vulnerability that allows for arbitrary command execution. By manipulating the 'id' parameter in the '/plan/examExportPDF' endpoint, an attacker can inject and execute arbitrary commands on the underlying operating system.
 
 ### Affected Endpoint:
-/plan/examExportPDF
+`/plan/examExportPDF`
 
 ### Vulnerability Type:
 Arbitrary Command Execution (RCE)
