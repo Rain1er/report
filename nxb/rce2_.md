@@ -9,7 +9,7 @@ https://hzmanyun.com
 The code snippet provided contains a vulnerability that allows for Remote Command Execution (RCE) due to improper handling of user input in the exportPDF function.
 
 ### Affected Endpoint:
-/plan/exportPDF
+`/plan/exportPDF`
 
 ### Vulnerability Type:
 Remote Command Execution (RCE)
