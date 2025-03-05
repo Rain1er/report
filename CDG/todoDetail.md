@@ -44,21 +44,21 @@ public class RootSecurityFilter implements Filter {
 ```
 
 ```java
-	String logicGroupName = request.getParameter("logicGroupName");
-	if (logicGroupName == null || "".equals(logicGroupName.trim())) {
-		response.sendRedirect("../loginExpire.jsp");
-		return;
-	}
-	String curpage = request.getParameter("curPage");
-	FlowDao dao = new FlowDao();
-	Flow flow = dao.getAppById(logicGroupName);
-	if (flow == null) {
-		response.sendRedirect("../loginExpire.jsp");
-		return;
-	}
-	List<FlowDetail> flowDetails = dao.getAppDetailById(logicGroupName);
-    String flowControlFlag = JEConfig.getValue("flowControlFlag");
-	WatermarkControlService watermarkControlService = SpringContextUtil.getBean(WatermarkControlService.class);
+String logicGroupName = request.getParameter("logicGroupName");
+if (logicGroupName == null || "".equals(logicGroupName.trim())) {
+  response.sendRedirect("../loginExpire.jsp");
+  return;
+}
+String curpage = request.getParameter("curPage");
+FlowDao dao = new FlowDao();
+Flow flow = dao.getAppById(logicGroupName);
+if (flow == null) {
+  response.sendRedirect("../loginExpire.jsp");
+  return;
+}
+List<FlowDetail> flowDetails = dao.getAppDetailById(logicGroupName);
+  String flowControlFlag = JEConfig.getValue("flowControlFlag");
+WatermarkControlService watermarkControlService = SpringContextUtil.getBean(WatermarkControlService.class);
 //	WatermarkFlow watermarkFlow = watermarkControlService.getWatermarkFlowBylogicGroupName(logicGroupName);
 ```
 
